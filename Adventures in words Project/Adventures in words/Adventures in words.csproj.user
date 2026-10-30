@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\ARIANTJ\source\repos\Adventures in words Project\Adventures in words\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="InfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level1-g1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level1-g2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level2-g1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level2-g2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level3-g1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level3-g2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level_Select.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Level_Select_Game2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Menu_Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SucssesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="InfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IntroWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level1-g1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level1-g2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level2-g1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level2-g2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level3-g1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level3-g2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level_Select.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Level_Select_Game2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Menu_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SucssesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

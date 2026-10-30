@@ -1,0 +1,178 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Adventures_in_words</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\Game 2\**" />
+    <EmbeddedResource Remove="Resources\Game 2\**" />
+    <None Remove="Resources\Game 2\**" />
+    <Page Remove="Resources\Game 2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Backgr.png" />
+    <None Remove="Resources\Backmeny.png" />
+    <None Remove="Resources\backwood.png" />
+    <None Remove="Resources\btnchild.png" />
+    <None Remove="Resources\btnClose.png" />
+    <None Remove="Resources\Btnhome.png" />
+    <None Remove="Resources\btninfo.png" />
+    <None Remove="Resources\btnleveloff.png" />
+    <None Remove="Resources\btnlevelup.png" />
+    <None Remove="Resources\btnmusicoff.png" />
+    <None Remove="Resources\btnmusicon.png" />
+    <None Remove="Resources\btnord.png" />
+    <None Remove="Resources\btnorg.png" />
+    <None Remove="Resources\btnsetting.png" />
+    <None Remove="Resources\BYekan.ttf" />
+    <None Remove="Resources\Database1.accdb" />
+    <None Remove="Resources\endlvl.png" />
+    <None Remove="Resources\freedom.mp3" />
+    <None Remove="Resources\Game1\guidance.png" />
+    <None Remove="Resources\Game1\home.png" />
+    <None Remove="Resources\Game1\information.png" />
+    <None Remove="Resources\Game1\New.png" />
+    <None Remove="Resources\Game1\Rotation.png" />
+    <None Remove="Resources\Game1\word.png" />
+    <None Remove="Resources\Game1\wordfull.png" />
+    <None Remove="Resources\Game1\wordoff.png" />
+    <None Remove="Resources\Game1\wordon.png" />
+    <None Remove="Resources\Game2\backwood.png" />
+    <None Remove="Resources\Game2\bee.png" />
+    <None Remove="Resources\Game2\Btnhome.png" />
+    <None Remove="Resources\Game2\btnleveloff.png" />
+    <None Remove="Resources\Game2\btnlevelup.png" />
+    <None Remove="Resources\Game2\btnmusicoff.png" />
+    <None Remove="Resources\Game2\btnmusicon.png" />
+    <None Remove="Resources\Game2\btnsetting.png" />
+    <None Remove="Resources\Game2\chair.png" />
+    <None Remove="Resources\Game2\guidance.png" />
+    <None Remove="Resources\Game2\LevelBack.png" />
+    <None Remove="Resources\Game2\LevelNext.png" />
+    <None Remove="Resources\Game2\MO1.png" />
+    <None Remove="Resources\Game2\Pic1.png" />
+    <None Remove="Resources\Game2\Pic2.png" />
+    <None Remove="Resources\Game2\Pic3.png" />
+    <None Remove="Resources\Game2\Rotation.png" />
+    <None Remove="Resources\Game2\Shose.png" />
+    <None Remove="Resources\Game2\t1.png" />
+    <None Remove="Resources\Game2\t2.png" />
+    <None Remove="Resources\Game2\t3.png" />
+    <None Remove="Resources\Game2\t4.png" />
+    <None Remove="Resources\Game2\t5.png" />
+    <None Remove="Resources\Game2\word.png" />
+    <None Remove="Resources\Game2\wordfull.png" />
+    <None Remove="Resources\info.png" />
+    <None Remove="Resources\IntroLogo.png" />
+    <None Remove="Resources\LevelBack.png" />
+    <None Remove="Resources\LevelNext.png" />
+    <None Remove="Resources\LOGOName.png" />
+    <None Remove="Resources\logotb.png" />
+    <None Remove="Resources\Logo_Game.ico" />
+    <None Remove="Resources\Logo_Game.png" />
+    <None Remove="Resources\MO1.png" />
+    <None Remove="Resources\Ramollah_MRT.ttf" />
+    <None Remove="Resources\SoundEffect\Adventure-320bit.mp3" />
+    <None Remove="Resources\SoundEffect\freedom.mp3" />
+    <None Remove="Resources\SoundEffect\mixkit-click-error-1110.wav" />
+    <None Remove="Resources\SoundEffect\mixkit-coins-handling-1939.wav" />
+    <None Remove="Resources\SoundEffect\mixkit-ethereal-fairy-win-sound-2019.wav" />
+    <None Remove="Resources\SoundEffect\mixkit-hard-typewriter-click-1119.wav" />
+    <None Remove="Resources\SoundEffect\mixkit-melodic-gold-price-2000.wav" />
+    <None Remove="Resources\SoundEffect\mixkit-mouse-click-close-1113.wav" />
+    <None Remove="Resources\SoundEffect\mixkit-positive-interface-beep-221.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Backgr.png" />
+    <Resource Include="Resources\Backmeny.png" />
+    <Resource Include="Resources\backwood.png" />
+    <Resource Include="Resources\btnchild.png" />
+    <Resource Include="Resources\btnClose.png" />
+    <Resource Include="Resources\Btnhome.png" />
+    <Resource Include="Resources\btninfo.png" />
+    <Resource Include="Resources\btnleveloff.png" />
+    <Resource Include="Resources\btnlevelup.png" />
+    <Resource Include="Resources\btnmusicoff.png" />
+    <Resource Include="Resources\btnmusicon.png" />
+    <Resource Include="Resources\btnord.png" />
+    <Resource Include="Resources\btnorg.png" />
+    <Resource Include="Resources\btnsetting.png" />
+    <Content Include="Resources\Database1.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\Adventure-320bit.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\freedom.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\mixkit-click-error-1110.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\mixkit-coins-handling-1939.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\mixkit-ethereal-fairy-win-sound-2019.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\endlvl.png" />
+    <Resource Include="Resources\Game2\backwood.png" />
+    <Resource Include="Resources\Game2\Btnhome.png" />
+    <Resource Include="Resources\Game2\btnleveloff.png" />
+    <Resource Include="Resources\Game2\btnlevelup.png" />
+    <Resource Include="Resources\Game2\btnmusicoff.png" />
+    <Resource Include="Resources\Game2\btnmusicon.png" />
+    <Resource Include="Resources\Game2\btnsetting.png" />
+    <Resource Include="Resources\Game2\guidance.png" />
+    <Resource Include="Resources\Game2\LevelBack.png" />
+    <Resource Include="Resources\Game2\LevelNext.png" />
+    <Resource Include="Resources\Game2\MO1.png" />
+    <Resource Include="Resources\Game2\Pic1.png" />
+    <Resource Include="Resources\Game2\Pic2.png" />
+    <Resource Include="Resources\Game2\Pic3.png" />
+    <Resource Include="Resources\Game2\Rotation.png" />
+    <Resource Include="Resources\Game2\t1.png" />
+    <Resource Include="Resources\Game2\t2.png" />
+    <Resource Include="Resources\Game2\t3.png" />
+    <Resource Include="Resources\Game2\t4.png" />
+    <Resource Include="Resources\Game2\t5.png" />
+    <Resource Include="Resources\Game2\word.png" />
+    <Resource Include="Resources\Game2\wordfull.png" />
+    <Resource Include="Resources\SoundEffect\mixkit-hard-typewriter-click-1119.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Resources\SoundEffect\mixkit-melodic-gold-price-2000.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\mixkit-mouse-click-close-1113.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundEffect\mixkit-positive-interface-beep-221.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
+    <Resource Include="Resources\Game1\guidance.png" />
+    <Resource Include="Resources\Game1\home.png" />
+    <Resource Include="Resources\Game1\Rotation.png" />
+    <Resource Include="Resources\Game1\word.png" />
+    <Resource Include="Resources\Game1\wordfull.png" />
+    <Resource Include="Resources\Game1\wordoff.png" />
+    <Resource Include="Resources\Game1\wordon.png" />
+    <Resource Include="Resources\info.png" />
+    <Resource Include="Resources\IntroLogo.png" />
+    <Resource Include="Resources\LevelBack.png" />
+    <Resource Include="Resources\LevelNext.png" />
+    <Resource Include="Resources\LOGOName.png" />
+    <Resource Include="Resources\logotb.png" />
+    <Resource Include="Resources\Logo_Game.ico" />
+    <Resource Include="Resources\MO1.png" />
+    <Resource Include="Resources\Ramollah_MRT.ttf" />
+  </ItemGroup>
+
+</Project>

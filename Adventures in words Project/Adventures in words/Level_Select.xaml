@@ -1,0 +1,208 @@
+﻿<Window x:Class="Adventures_in_words.Level_Select"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Adventures_in_words"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Level_Select" Height="650" Width="350">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CustomButtonStyle" TargetType="Button">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="leveloffButtonStyle" TargetType="Button" BasedOn="{StaticResource CustomButtonStyle}">
+                    <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush ImageSource="Resources\btnleveloff.png" Stretch="Fill"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <FontFamily>pack://application:,,,/Adventures in words;component/Resources/Ramollah_MRT.ttf#MRT_Ramollah</FontFamily>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="White" FontSize="30" VerticalAlignment="Center">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="levelupButtonStyle" TargetType="Button" BasedOn="{StaticResource leveloffButtonStyle}">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush ImageSource="Resources\btnlevelup.png" Stretch="Fill"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="CustomButtonStyleCoin" TargetType="Button" BasedOn="{StaticResource leveloffButtonStyle}">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush ImageSource="Resources/MO1.png" Stretch="Fill"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="White" FontSize="25" VerticalAlignment="Center">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/Backgr.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Border Grid.Column="0" Height="80" Width="320" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15,15,15,0">
+                <DockPanel>
+                    <Button Name="BtnSetting" Height="50" Width="50" HorizontalAlignment="Left" Margin="10,0,0,0" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" Click="BtnSetting_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/btnsetting.png" Stretch="Fill"/>
+                        </Button.Background>
+                    </Button>
+                    <DockPanel Visibility="Collapsed" Name="Dock1">
+                        <Button Name="Btnhome" Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" Click="Btnhome_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources/Btnhome.png" Stretch="Fill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Name="Btnmusicoff" Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" Click="Btnmusicoff_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources/btnmusicoff.png" Stretch="Fill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Name="Btnmusicon" Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" Click="Btnmusicon_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources/btnmusicon.png" Stretch="Fill"/>
+                            </Button.Background>
+                        </Button>
+                    </DockPanel>
+                    <Button Name="btncoin" Width="110" Height="40" HorizontalAlignment="Right" BorderThickness="0" Margin="0,0,10,0" Style="{StaticResource CustomButtonStyleCoin}" >
+                    </Button>
+
+                </DockPanel>
+            </Border>
+            <Border Name="brd1" Height="400" Width="320" Grid.Column="1" HorizontalAlignment="Left" Margin="8,15,0,0">
+                <Border.Background>
+                    <ImageBrush ImageSource="Resources\backwood.png" Stretch="Fill"/>
+                </Border.Background>
+                <StackPanel Name="stack1">
+                    <DockPanel>
+                        <Button Name="btnlvl1" Click="btnlvl1_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,75,0,0" BorderThickness="0" Style="{StaticResource levelupButtonStyle}" Content="1">
+                        </Button>
+                        <Button Name="btnlvl2" Click="btnlvl2_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                        </Button>
+                        <Button Name="btnlvl3" Click="btnlvl3_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                        </Button>
+                        <Button Name="btnlvl4" Click="btnlvl4_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                           
+                        </Button>
+                    </DockPanel>
+                    <DockPanel>
+                        <Button Name="btnlvl5" Click="btnlvl5_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                           
+                        </Button>
+                        <Button Name="btnlvl6" Click="btnlvl6_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                           
+                        </Button>
+                        <Button Name="btnlvl7" Click="btnlvl7_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                            
+                        </Button>
+                        <Button Name="btnlvl8" Click="btnlvl8_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                           
+                        </Button>
+                    </DockPanel>
+                    <DockPanel>
+                        <Button Name="btnlvl9" Click="btnlvl9_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                           
+                        </Button>
+                        <Button Name="btnlvl10" Click="btnlvl10_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                           
+                        </Button>
+                        <Button Name="btnlvl11" Click="btnlvl11_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                            
+                        </Button>
+                        <Button Name="btnlvl12" Click="btnlvl12_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+                            
+                        </Button>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+            <Border Name="brd2" Height="400" Width="320" Grid.Column="3" HorizontalAlignment="Left" Margin="8,15,0,0" Visibility="Collapsed">
+                    <Border.Background>
+                        <ImageBrush ImageSource="Resources\backwood.png" Stretch="Fill"/>
+                    </Border.Background>
+                    <StackPanel Name="stack2">
+                    <DockPanel>
+                        <Button Name="btnlvl13" Click="btnlvl13_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+
+                            <Button.FontFamily>
+                                <FontFamily>pack://application:,,,/Adventures in words;component/Resources/Ramollah_MRT.ttf#MRT_Ramollah</FontFamily>
+                            </Button.FontFamily>
+                        </Button>
+                        <Button Name="btnlvl14" Click="btnlvl14_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+
+                        </Button>
+                        <Button Name="btnlvl15" Click="btnlvl15_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+
+                        </Button>
+                        <Button Name="btnlvl16" Click="btnlvl16_Click" Height="60" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" BorderThickness="0" Style="{StaticResource leveloffButtonStyle}">
+
+                        </Button>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="2" Height="125" Width="320" HorizontalAlignment="Left" Margin="15,0,0,0" >
+                <DockPanel>
+                    <Button Name="lvllast" Click="lvllast_Click" Width="65" Height="65" HorizontalAlignment="Left" Margin="90,0,0,5" BorderThickness="0" Style="{StaticResource CustomButtonStyle}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources\LevelBack.png" Stretch="Fill"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="lvlnext" Click="lvlnext_Click" Width="65" Height="65" HorizontalAlignment="Right" Margin="0,0,90,5" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources\LevelNext.png" Stretch="Fill"/>
+                        </Button.Background>
+                    </Button>
+                </DockPanel>
+            </Border>
+        </StackPanel>
+        <MediaElement x:Name="backgroundMusic" Source="Resources\SoundEffect\Adventure-320bit.mp3" LoadedBehavior="Manual" />
+    </Grid>
+</Window>

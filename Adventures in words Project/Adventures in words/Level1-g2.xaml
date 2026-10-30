@@ -1,0 +1,196 @@
+﻿<Window x:Class="Adventures_in_words.Level1_g2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Adventures_in_words"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Level1_g2" Height="650" Width="350">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CustomButtonStyle" TargetType="Button">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <FontFamily>pack://application:,,,/Adventures in words;component/Resources/Ramollah_MRT.ttf#MRT_Ramollah</FontFamily>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="CustomButtonStyleCoin" TargetType="Button" BasedOn="{StaticResource CustomButtonStyle}">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush ImageSource="Resources/Game2/MO1.png" Stretch="Fill"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="White" FontSize="25" VerticalAlignment="Center">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="CustomButtonStyleWordfull" TargetType="Button" BasedOn="{StaticResource CustomButtonStyle}">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush ImageSource="Resources\Game2\wordfull.png" Stretch="Fill"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="White" FontSize="30" VerticalAlignment="Center" >
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="CustomButtonStyleWordfullfalse" TargetType="Button" BasedOn="{StaticResource CustomButtonStyleWordfull}">
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="Red" FontSize="30" VerticalAlignment="Center" >
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="CustomButtonStyleWordfullTrue" TargetType="Button" BasedOn="{StaticResource CustomButtonStyleWordfull}">
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="LawnGreen" FontSize="30" VerticalAlignment="Center" >
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="Word" TargetType="Button" BasedOn="{StaticResource CustomButtonStyle}">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush ImageSource="Resources\Game2\word.png" Stretch="Fill"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"
+                                   Foreground="White" FontSize="25" VerticalAlignment="Center">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" Opacity="0.6"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/Backgr.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Border Grid.Column="0" Height="80" Width="320" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="15,15,15,0">
+                <DockPanel>
+                    <Button Name="BtnSetting" Height="50" Width="50" HorizontalAlignment="Left" Margin="10,0,0,0" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" Click="BtnSetting_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/Game2/btnsetting.png" Stretch="Fill"/>
+                        </Button.Background>
+                    </Button>
+                    <DockPanel Visibility="Collapsed" Name="Dock1">
+                        <Button Name="Btnhome" Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" BorderThickness="0" Style="{StaticResource CustomButtonStyle}" Click="Btnhome_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources/Game2/Btnhome.png" Stretch="Fill"/>
+                            </Button.Background>
+                        </Button>
+                    </DockPanel>
+                    <Button Name="btncoin" Width="110" Height="40" HorizontalAlignment="Right" BorderThickness="0" Margin="0,0,10,0" Style="{StaticResource CustomButtonStyleCoin}" >
+                    </Button>
+
+                </DockPanel>
+            </Border>
+            <Border Name="brdpic" Grid.Column="2" Width="230" Height="230" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,15,5">
+            </Border>
+            <Border Grid.Column="2" Width="330" Height="290" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,15,0">
+                <Border.Background>
+                    <ImageBrush ImageSource="Resources\Game2\backwood.png" Stretch="Fill"/>
+                </Border.Background>
+                <StackPanel>
+                    <DockPanel>
+                        <Button Name="wordfull" Width="150" Height="60" BorderThickness="0" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyleWordfull}" Margin="95,0,0,20">
+                        </Button>
+                        <Button Name="btnRotation" Width="50" Height="50" BorderThickness="0" HorizontalAlignment="Right" Margin="0,30,25,0" Style="{StaticResource CustomButtonStyle}" Click="btnRotation_Click" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="Resources\Game2\Rotation.png" Stretch="Fill"/>
+                            </Button.Background>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel>
+                        <Button Name="wrd1" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="25,5,1,0" Style="{StaticResource Word}" Click="wrd1_Click">
+                        </Button>
+                        <Button Name="wrd2" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,5,1,0" Style="{StaticResource Word}" Click="wrd2_Click">
+                        </Button>
+                        <Button Name="wrd3" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,5,1,0" Style="{StaticResource Word}" Click="wrd3_Click">
+                        </Button>
+                        <Button Name="wrd4" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,5,1,0" Style="{StaticResource Word}" Click="wrd4_Click">
+                        </Button>
+                        <Button Name="wrd5" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,5,20,0" Style="{StaticResource Word}" Click="wrd5_Click">
+                        </Button>
+                    </DockPanel>
+                    <DockPanel>
+                        <Button Name="wrd6" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="25,15,1,0"  Style="{StaticResource Word}" Click="wrd6_Click">
+                        </Button>
+                        <Button Name="wrd7" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,15,1,0"  Style="{StaticResource Word}" Click="wrd7_Click">
+                        </Button>
+                        <Button Name="wrd8" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,15,1,0"  Style="{StaticResource Word}" Click="wrd8_Click">
+                        </Button>
+                        <Button Name="wrd9" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,15,1,0"  Style="{StaticResource Word}" Click="wrd9_Click">
+                        </Button>
+                        <Button Name="wrd10" Width="55" Height="55" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="0,15,20,0"  Style="{StaticResource Word}" Click="wrd10_Click">
+                        </Button>
+                    </DockPanel>
+                    <Button Name="timepoint" Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Stretch" BorderThickness="0" Margin="10,10,1,0" Style="{StaticResource CustomButtonStyle}" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources\Game2\t1.png" Stretch="Fill"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
