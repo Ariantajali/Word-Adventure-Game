@@ -20,7 +20,6 @@ An interactive and educational desktop game built with C# and WPF. The game feat
 *   **UI/UX:** XAML, Custom Styles, Data Binding
 
 ## 📸 Screenshots
-*(Add the screenshots from your PDF here)*
 ![Intro](Screenshots/intro.png)
 ![Menu](Screenshots/menu.png)
 ![Gameplay](Screenshots/gameplay.png)
